@@ -1,6 +1,5 @@
 //code inspiration from CodePen.io
 var startTime = new Date(),
-    // get the starting positions of each hand (in seconds)
     startS = startTime.getSeconds(),
     startM = startTime.getMinutes() * 60 + startS,
     startH = startTime.getHours() % 12 * 3600 + startM;
@@ -36,6 +35,9 @@ function rotate(deg) {
 }
 
 
+
+
+
 var controller = new ScrollMagic.Controller();
 
 $(function () {
@@ -62,6 +64,7 @@ $(function () {
     });
   });
 });
+
 
 !(function($) {
 
@@ -156,17 +159,28 @@ $(function () {
 
 })(jQuery);
 
-$(document).ready(function() {
-		  $('.nav-toggle').click(function(){
-			var collapse_content_selector = $(this).attr('href');
+window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 3000);
 
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			});
-		  });
+$(".nav-toggle").click(function(e) {
+  jQuery('.targetDiv').hide();
+   $('#div'+$(this).attr('target')).show();
+   e.preventDefault();
+});
 
-		});
 
+$(document).click(function(e) {
+ var $target = $(e.target);
+ var popupContent = $('#div'+$(this).attr('target'));
+ if (!$target.is(popupContent) && !$target.is($(".nav-toggle")) ) {
+     if ($('.targetDiv').is(':visible')) {
+       $(".targetDiv").hide();
+     }
+ }
+});
 
 
     $(window).on("load", function() {
