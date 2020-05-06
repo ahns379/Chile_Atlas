@@ -159,16 +159,17 @@ $(function () {
 
 })(jQuery);
 
-window.setTimeout(function() {
-    $(".alert").fadeTo(500, 0).slideUp(500, function(){
-        $(this).remove();
-    });
-}, 3000);
 
 $(".nav-toggle").click(function(e) {
   jQuery('.targetDiv').hide();
    $('#div'+$(this).attr('target')).show();
    e.preventDefault();
+
+   window.setTimeout(function() {
+       $(".alert").fadeTo(500, 0).slideUp(500, function(){
+           $(this).remove();
+       });
+   }, 2000);
 });
 
 
@@ -308,21 +309,3 @@ $(document).click(function(e) {
       e.preventDefault();
       $('html, body').animate({scrollTop:0}, '300');
     });
-
-
-
-
-//
-// $(".js-open-modal").click(function(){
-//   $(".modal").addClass("visible");
-// });
-//
-// $(".js-close-modal").click(function(){
-//   $(".modal").removeClass("visible");
-// });
-//
-// $(document).click(function(event) {
-//   if (!$(event.target).closest(".modal,.js-open-modal").length) {
-//     $("body").find(".modal").removeClass("visible");
-//   }
-// });
