@@ -7,7 +7,6 @@ var startTime = new Date(),
 
 refreshClock();
 
-// compute the rotation amount relative to the starting time
 function refreshClock() {
   var now = new Date(),
       diff = timeDifference(startTime, now),
@@ -22,12 +21,10 @@ function refreshClock() {
   setTimeout(refreshClock, 1000);
 }
 
-// compute the time difference between two date objects (in seconds)
 function timeDifference(date1, date2) {
   return Math.round(Math.abs(date2.getTime() - date1.getTime()) / 1000);
 }
 
-// returns the cross-browser css rotation properties
 function rotate(deg) {
   return {
     '-webkit-transform': 'rotate(' + deg + 'deg)',

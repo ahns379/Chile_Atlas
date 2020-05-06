@@ -956,6 +956,7 @@ SquareGrid {
   text-decoration: none;
   display:flex;
   font-size: 16px;
+
   }
   .nav-toggle:hover{
     color: #000;
@@ -968,6 +969,7 @@ SquareGrid {
   position: absolute;
   margin-top: -53%;
   margin-left: 80%;
+
   }
   #copper{
     color: #ED1C24;
@@ -992,6 +994,8 @@ SquareGrid {
     margin-top: -62.4%;
     margin-left: 16.2%;
 }
+
+
 
 /* imports */
 .import_label{
