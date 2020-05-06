@@ -87,7 +87,7 @@ body {
 /* clock */
 .clock {
   position: absolute;
-  top: 55%; left: 18%;
+  top: 50%; left: 18%;
   width: 15rem; height: 15rem;
   margin: -6rem 0 0 -6rem;
   border: 0.05rem solid black;
@@ -148,7 +148,7 @@ margin-top: 15%;
   }
 
   .tableofcontents_head{
-    margin-top: -25%;
+    margin-top: -32%;
     margin-left: 65%;
     text-decoration: none;
   }
@@ -169,7 +169,7 @@ margin-top: 15%;
   }
   .title_page{
     padding: 20%;
-    /* margin-top: -3%; */
+    margin-top: .5%;
     font-size: 5em;
     /* margin-left: -5%; */
 }
